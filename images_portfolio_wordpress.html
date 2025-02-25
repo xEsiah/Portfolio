@@ -8,27 +8,55 @@
     <style>
       /* Styles sombres avec accents néon */
       body {
-        background-color: #121212;
+        background-image: url("image_background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         color: #ffffff;
         font-family: Arial, sans-serif;
-        margin: 0;
+        margin: 15px;
         padding: 0;
+        position: relative;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(27, 27, 27, 0.411); /* Opacité ajustée */
+        z-index: -1;
+        margin: 0;
+        pointer-events: none;
       }
       header {
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
         display: flex;
         align-items: center;
         justify-content: space-between;
+        text-align: left;
         padding: 2rem;
         border-bottom: 2px solid #333;
-        text-align: left;
+        background-color: #1e1e1ebb;
+        border-radius: 5px;
+        margin-bottom: 60px;
       }
       h1 {
+        font-size: 4rem; /* Augmentation de la taille de la police */
         color: #03dede;
         text-shadow: 0 0 10px #03dede;
+        text-align: left;
+      }
+      h2 {
+        font-size: 3rem; /* Augmentation de la taille de la police des sous-titres */
+        color: #ddd;
+        text-shadow: 0 0 20px #03dede;
+        text-align: center;
       }
       .PFP {
-        width: 50px;
-        height: 50px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         object-fit: cover;
       }
@@ -54,16 +82,6 @@
         border-radius: 10px;
         box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
       }
-      footer {
-        text-align: center;
-        padding: 1rem;
-        background-color: #121212;
-        color: #ddd;
-      }
-      a {
-        text-decoration: none;
-        color: #03dede;
-      }
     </style>
   </head>
   <body>
@@ -71,9 +89,9 @@
     <header>
       <div class="profile">
         <h1>DUPRE Theo</h1>
-        <p>Passionné de code et assoiffé d'apprentissage</p>
+        <p>Explorateur du Numérique</p>
       </div>
-      <img class="PFP" src="DUPRE_Théo.jpg" alt="Photo de profil" />
+      <img class="PFP" src="dupre_theo.jpg" alt="Photo de profil" />
     </header>
 
     <!-- Section vidéo -->
@@ -90,8 +108,24 @@
     </div>
 
     <!-- Footer avec lien vers le portfolio -->
-    <footer>
-      <p>Retour à <a href="portfolio.html">mon portfolio</a></p>
+    <footer
+      style="
+        background-color: #1e1e1e;
+        padding: 2rem 0;
+        color: #ddd;
+        text-align: center;
+        border-top: 2px solid rgba(0, 255, 255, 0.5);
+        border-radius: 5px;
+      "
+    >
+      <p>
+        Retour à
+        <a
+          href="portfolio.html"
+          style="color: #03dede; text-decoration: none; font-weight: bold"
+          >mon portfolio</a
+        >
+      </p>
     </footer>
   </body>
 </html>

@@ -7,7 +7,6 @@
     <link rel="icon" href="icon.png" alt="Icone site Portfolio" />
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* Styles sombres avec accents néon */
       body {
         background-image: url("image_background.jpg");
         background-size: cover;
@@ -26,7 +25,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(27, 27, 27, 0.411); /* Opacité ajustée */
+        background-color: rgba(27, 27, 27, 0.411);
         z-index: -1;
         margin: 0;
         pointer-events: none;
@@ -49,13 +48,13 @@
         max-width: 50%;
       }
       h1 {
-        font-size: 4rem; /* Augmentation de la taille de la police */
+        font-size: 4rem;
         color: #03dede;
         text-shadow: 0 0 10px #03dede;
         text-align: left;
       }
       h2 {
-        font-size: 3rem; /* Augmentation de la taille de la police des sous-titres */
+        font-size: 3rem;
         color: #ddd;
         text-shadow: 0 0 20px #03dede;
         text-align: center;
@@ -81,8 +80,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        text-decoration: none; /* Retirer le soulignement du lien */
-        color: #fff; /* S'assurer que le texte reste visible */
+        text-decoration: none;
+        color: #fff;
         margin-bottom: 10px;
       }
       .project-card:hover {
@@ -115,14 +114,16 @@
         border: 1px solid #333;
         border-radius: 10px;
         box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
-        margin-bottom: 30px;
+        margin-bottom: 90px;
       }
       #competences ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         list-style-type: none;
         padding: 0;
         margin: 0;
+        flex-wrap: wrap;
+        gap: 150px;
       }
       #competences li {
         background-color: #1e1e1ebb;
@@ -139,7 +140,7 @@
       }
       #competences li:hover {
         transform: translateY(-5px);
-        background-color: #2f739b; /* Fond sombre au survol */
+        background-color: #2f739b;
         box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
         animation: bounce 0.5s ease-out;
       }
@@ -191,7 +192,7 @@
         <!-- Projet 2 - Portfolio -->
         <a href="images_portfolio_wordpress.html" class="project-card">
           <div class="project-info">
-            <h3>Portfolio</h3>
+            <h3>Portfolio No Code</h3>
             <p>Un Portfolio conçu avec Wordpress hébergé localement.</p>
           </div>
           <div class="project-icons">
@@ -206,20 +207,49 @@
     <h2>Compétences</h2>
     <section id="competences">
       <ul>
+        <li>HTML CSS 🌐</li>
         <li>Python 🐍</li>
-        <li>HTML / CSS 🌐</li>
-        <li>JavaScript ⚡</li>
+        <li>C 🖥️</li>
         <li>MYSQL 🐬</li>
+        <li>JavaScript ⚡</li>
       </ul>
     </section>
 
     <!-- Section Contact -->
-    <footer>
-      <h2>Contact</h2>
-      <p>Email : theo.thws.06@gmail.com</p>
-      <div class="social-icons">
-        <a href="#"><img src="linkedin.png" alt="LinkedIn" /></a>
-        <a href="#"><img src="icon_github.png" alt="GitHub" /></a>
+    <footer
+      style="
+        background-color: #1e1e1e;
+        padding: 2rem 0;
+        color: #ddd;
+        text-align: center;
+        border-top: 2px solid rgba(0, 255, 255, 0.5);
+        border-radius: 5px;
+      "
+    >
+      <h2 style="font-size: 2rem; color: #03dede">Contact</h2>
+      <p>
+        Email :
+        <a
+          href="mailto:theo.thws.06@gmail.com"
+          style="color: #03dede; text-decoration: none"
+          >theo.thws.06@gmail.com</a
+        >
+      </p>
+      <div class="social-icons" style="margin-top: 1rem">
+        <a href="https://www.linkedin.com/in/xesiah/" style="margin: 0 15px">
+          <img
+            src="icon_linkedin.png"
+            alt="LinkedIn"
+            style="width: 30px; height: 30px; filter: brightness(0.8)"
+          />
+        </a>
+        <a href="https://github.com/xEsiah" style="margin: 0 15px">
+          <img
+            src="icon_github.png"
+            alt="GitHub"
+            style="width: 30px; height: 30px; filter: brightness(0.8)"
+          />
+        </a>
       </div>
     </footer>
   </body>
