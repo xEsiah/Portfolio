@@ -8,6 +8,7 @@
     <style>
       /* Styles sombres avec accents néon */
       body {
+        background-color: #1e1e1e;
         background-image: url("images/image_background.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -17,6 +18,8 @@
         margin: 15px;
         padding: 0;
         position: relative;
+        background-attachment: fixed;
+        transition: background-color 0.3s ease;
       }
       body::before {
         content: "";
@@ -53,6 +56,9 @@
         color: #ddd;
         text-shadow: 0 0 20px #03dede;
         text-align: center;
+      }
+      a {
+        -webkit-tap-highlight-color: transparent;
       }
       .PFP {
         width: 200px;

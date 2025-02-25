@@ -8,6 +8,7 @@
     <script src="hoverJS.js"></script>
     <style>
       body {
+        background-color: #1e1e1e;
         background-image: url("images/image_background.jpg");
         background-size: cover;
         background-repeat: no-repeat;
@@ -17,6 +18,7 @@
         margin: 15px;
         padding: 0;
         position: relative;
+        transition: background-color 0.3s ease;
       }
       body::before {
         content: "";
@@ -89,6 +91,9 @@
 
         p {
           font-size: 1rem;
+        }
+        a {
+          -webkit-tap-highlight-color: transparent;
         }
 
         .PFP {
