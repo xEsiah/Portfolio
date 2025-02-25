@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio DUPRE Théo</title>
+    <link rel="icon" href="icon.png" alt="Icone site Portfolio" />
     <link rel="stylesheet" href="styles.css" />
     <style>
       /* Styles sombres avec accents néon */
@@ -11,22 +12,42 @@
         background-color: #121212;
         color: #ffffff;
         font-family: Arial, sans-serif;
-        margin: 0;
+        margin: 15px;
         padding: 0;
       }
       header {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
         padding: 2rem;
         border-bottom: 2px solid #333;
+      }
+      .profile {
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+      }
+      h1 {
+        font-size: 3rem;
       }
       h1,
       h2 {
         color: #03dede;
         text-shadow: 0 0 10px #03dede;
       }
+      p {
+        font-size: 1.2rem;
+      }
       p,
       li {
         color: #ddd;
+      }
+      .PFP {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
       }
       .project-card {
         background-color: #1e1e1e;
@@ -35,13 +56,24 @@
         border-radius: 10px;
         box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
         transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none; /* Retirer le soulignement du lien */
+        color: #fff; /* S'assurer que le texte reste visible */
       }
       .project-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
       }
+      .project-info {
+        max-width: 70%;
+      }
+      .project-icons {
+        display: flex;
+        gap: 10px;
+      }
       a img {
-        filter: brightness(0) invert(1);
         width: 30px;
         margin: 0 10px;
         transition: filter 0.2s;
@@ -55,26 +87,45 @@
     <!-- En-tête du portfolio -->
     <header>
       <div class="profile">
-        <img src="profile.jpg" alt="Photo de profil" />
         <h1>DUPRE Theo</h1>
-        <p>Passionné de code et créateur de solutions innovantes</p>
+        <p>Passionné de code et assoiffé d'apprentissage</p>
       </div>
+      <img class="PFP" src="DUPRE_Théo.jpg" alt="Photo de profil" />
     </header>
 
     <!-- Section Projets -->
     <section id="projets">
       <h2>Mes Projets</h2>
       <div class="project-grid">
-        <div class="project-card">
-          <img src="projet1.png" alt="Projet 1" />
-          <h3>Projet 1</h3>
-          <p>Description courte du projet.</p>
-        </div>
-        <div class="project-card">
-          <img src="projet2.png" alt="Projet 2" />
-          <h3>Projet 2</h3>
-          <p>Description courte du projet.</p>
-        </div>
+        <!-- Projet 1 - Labyrinthe -->
+        <a
+          href="https://github.com/xEsiah/Labyrinthe"
+          class="project-card"
+          target="_blank"
+        >
+          <div class="project-info">
+            <h3>Labyrinthe</h3>
+            <p>
+              Un jeu de labyrinthe événementiel conçu en Python avec la
+              bibliothèque tkinter et publié sur GitHub.
+            </p>
+          </div>
+          <div class="project-icons">
+            <img src="icon_python.png" alt="icon_python" />
+            <img src="icon_github.png" alt="icon_github" />
+          </div>
+        </a>
+        <!-- Projet 2 - Portfolio -->
+        <a href="images_portfolio_wordpress.html" class="project-card">
+          <div class="project-info">
+            <h3>Portfolio</h3>
+            <p>Un Portfolio conçu avec Wordpress hébergé localement.</p>
+          </div>
+          <div class="project-icons">
+            <img src="icon_wordpress.png" alt="icon_wordpress" />
+            <img src="icon_wamp.png" alt="icon_wamp" />
+          </div>
+        </a>
       </div>
     </section>
 
@@ -82,20 +133,19 @@
     <section id="competences">
       <h2>Compétences</h2>
       <ul>
-        <li>Python</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>Java</li>
+        <li>Python 🐍</li>
+        <li>HTML / CSS 🌐</li>
+        <li>JavaScript ⚡</li>
       </ul>
     </section>
 
     <!-- Section Contact -->
     <footer>
       <h2>Contact</h2>
-      <p>Email : exemple@email.com</p>
+      <p>Email : theo.thws.06@gmail.com</p>
       <div class="social-icons">
         <a href="#"><img src="linkedin.png" alt="LinkedIn" /></a>
-        <a href="#"><img src="github.png" alt="GitHub" /></a>
+        <a href="#"><img src="icon_github.png" alt="GitHub" /></a>
       </div>
     </footer>
   </body>
