@@ -65,17 +65,7 @@
         border-radius: 50%;
         object-fit: cover;
       }
-      .images-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        padding: 2rem;
-      }
-      .images-container img {
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-      }
+
       .video-container {
         text-align: center;
         margin: 2rem;
@@ -83,7 +73,7 @@
       .video-container iframe {
         width: 100%;
         max-width: 800px;
-        height: 450px;
+        height: auto;
         border-radius: 10px;
         box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
       }
@@ -94,13 +84,23 @@
           padding: 1rem;
           text-align: center;
         }
-
         .PFP {
           width: 150px;
           height: 150px;
           margin-bottom: 10px;
         }
+        .video-container {
+          margin: 1rem; /* Réduit les marges sur mobile */
+        }
 
+        .video-container iframe {
+          max-width: 100%; /* Enlève la largeur maximale */
+          height: 200px; /* Ajuste la hauteur de la vidéo */
+        }
+
+        h2 {
+          font-size: 2rem; /* Réduit la taille du titre sur mobile */
+        }
         h1 {
           font-size: 3rem;
         }
@@ -124,15 +124,13 @@
     <!-- Section vidéo -->
     <div class="video-container">
       <h2>Présentation du projet</h2>
-      <div class="video-wrapper">
-        <iframe
-          src="videos/Ascending Legends.mp4"
-          title="Présentation Ascending Legends"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
+      <iframe
+        src="videos/Ascending Legends.mp4"
+        title="Présentation Ascending Legends"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
 
     <!-- Footer avec lien vers le portfolio -->
