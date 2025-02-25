@@ -9,19 +9,39 @@
     <style>
       /* Styles sombres avec accents néon */
       body {
-        background-color: #121212;
+        background-image: url("image_background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         color: #ffffff;
         font-family: Arial, sans-serif;
         margin: 15px;
         padding: 0;
+        position: relative;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(27, 27, 27, 0.411); /* Opacité ajustée */
+        z-index: -1;
+        margin: 0;
+        pointer-events: none;
       }
       header {
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
         display: flex;
         align-items: center;
         justify-content: space-between;
         text-align: left;
         padding: 2rem;
         border-bottom: 2px solid #333;
+        background-color: #1e1e1ebb;
+        border-radius: 5px;
+        margin-bottom: 120px;
       }
       .profile {
         display: flex;
@@ -29,18 +49,20 @@
         max-width: 50%;
       }
       h1 {
-        font-size: 3rem;
-      }
-      h1,
-      h2 {
+        font-size: 4rem; /* Augmentation de la taille de la police */
         color: #03dede;
         text-shadow: 0 0 10px #03dede;
+        text-align: left;
       }
-      p {
-        font-size: 1.2rem;
+      h2 {
+        font-size: 3rem; /* Augmentation de la taille de la police des sous-titres */
+        color: #ddd;
+        text-shadow: 0 0 20px #03dede;
+        text-align: center;
       }
       p,
       li {
+        font-size: 1.2rem;
         color: #ddd;
       }
       .PFP {
@@ -50,7 +72,7 @@
         border-radius: 10px;
       }
       .project-card {
-        background-color: #1e1e1e;
+        background-color: #1e1e1ebb;
         border: 1px solid #333;
         padding: 1rem;
         border-radius: 10px;
@@ -61,9 +83,11 @@
         align-items: center;
         text-decoration: none; /* Retirer le soulignement du lien */
         color: #fff; /* S'assurer que le texte reste visible */
+        margin-bottom: 10px;
       }
       .project-card:hover {
         transform: translateY(-5px);
+        background-color: #3b6075e0;
         box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
       }
       .project-info {
@@ -73,13 +97,62 @@
         display: flex;
         gap: 10px;
       }
+      .project-grid {
+        margin-bottom: 30px;
+      }
       a img {
         width: 30px;
         margin: 0 10px;
         transition: filter 0.2s;
       }
       a img:hover {
-        filter: brightness(0) invert(1) drop-shadow(0 0 5px #03dede);
+        filter: brightness(1) invert(0) drop-shadow(0 0 5px #77b1d3);
+      }
+      #competences {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #1e1e1ebb;
+        border: 1px solid #333;
+        border-radius: 10px;
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+        margin-bottom: 30px;
+      }
+      #competences ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      #competences li {
+        background-color: #1e1e1ebb;
+        border: 1px solid #333;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        transition: background-color 0.3s ease-in-out;
+      }
+      #competences li:hover {
+        transform: translateY(-5px);
+        background-color: #2f739b; /* Fond sombre au survol */
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+        animation: bounce 0.5s ease-out;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
@@ -88,9 +161,9 @@
     <header>
       <div class="profile">
         <h1>DUPRE Theo</h1>
-        <p>Passionné de code et assoiffé d'apprentissage</p>
+        <p>Explorateur du Numérique</p>
       </div>
-      <img class="PFP" src="DUPRE_Théo.jpg" alt="Photo de profil" />
+      <img class="PFP" src="dupre_theo.jpg" alt="Photo de profil" />
     </header>
 
     <!-- Section Projets -->
@@ -130,8 +203,8 @@
     </section>
 
     <!-- Section Compétences -->
+    <h2>Compétences</h2>
     <section id="competences">
-      <h2>Compétences</h2>
       <ul>
         <li>Python 🐍</li>
         <li>HTML / CSS 🌐</li>
