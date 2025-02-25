@@ -18,7 +18,6 @@
         margin: 15px;
         padding: 0;
         position: relative;
-        background-attachment: fixed;
         transition: background-color 0.3s ease;
       }
       body::before {
@@ -46,13 +45,13 @@
         margin-bottom: 60px;
       }
       h1 {
-        font-size: 4rem; /* Augmentation de la taille de la police */
+        font-size: 4rem;
         color: #03dede;
         text-shadow: 0 0 10px #03dede;
         text-align: left;
       }
       h2 {
-        font-size: 3rem; /* Augmentation de la taille de la police des sous-titres */
+        font-size: 3rem;
         color: #ddd;
         text-shadow: 0 0 20px #03dede;
         text-align: center;
@@ -110,9 +109,32 @@
           font-size: 1rem;
         }
       }
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* Maintient le ratio 16:9 */
+        overflow: hidden;
+        background: #000;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+      }
+
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+      .video-container iframe {
+        width: 100%;
+        height: auto;
+      }
     </style>
   </head>
   <body>
+    <!-- En-tête avec photo de profil et titre -->
     <header>
       <div class="profile">
         <h1>DUPRE Theo</h1>
@@ -120,16 +142,21 @@
       </div>
       <img class="PFP" src="images/dupre_theo.jpg" alt="Photo de profil" />
     </header>
+
+    <!-- Section vidéo -->
     <div class="video-container">
-      <h2>Presentation du projet</h2>
-      <iframe
-        src="videos/Portfolio Wordpress.mp4"
-        title="Presentation Portfolio Wordpress"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <h2>Présentation du projet</h2>
+      <div class="video-wrapper">
+        <iframe
+          src="videos/Portfolio Wordpress.mp4"
+          title="Présentation Portfolio Wordpress"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
+
     <!-- Footer avec lien vers le portfolio -->
     <footer
       style="
