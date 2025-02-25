@@ -38,7 +38,7 @@
         text-align: left;
         padding: 2rem;
         border-bottom: 2px solid #333;
-        background-color: #1e1e1e86;
+        background-color: #1e1e1e9f;
         border-radius: 5px;
         margin-bottom: 120px;
       }
@@ -71,7 +71,7 @@
         border-radius: 10px;
       }
       .project-card {
-        background-color: #1e1e1e86;
+        background-color: #1e1e1e9f;
         border: 1px solid #333;
         padding: 1rem;
         border-radius: 10px;
@@ -94,7 +94,17 @@
       }
       .project-icons {
         display: flex;
-        gap: 10px;
+        gap: 20px;
+      }
+      .project-icons img {
+        width: 50px;
+        height: 50px;
+        filter: brightness(0.8);
+        transition: filter 0.3s ease;
+      }
+      .project-icons img:hover {
+        filter: brightness(1);
+        transform: scale(1.1);
       }
       .project-grid {
         margin-bottom: 30px;
@@ -110,7 +120,7 @@
       #competences {
         font-family: Arial, sans-serif;
         padding: 20px;
-        background-color: #1e1e1e86;
+        background-color: #1e1e1e9f;
         border: 1px solid #333;
         border-radius: 10px;
         box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
@@ -155,6 +165,24 @@
           transform: translateY(0);
         }
       }
+      social-icon {
+        transition: transform 0.3s ease;
+      }
+
+      .social-icon:hover {
+        transform: scale(1.1);
+      }
+
+      .icon {
+        width: 40px;
+        height: 40px;
+        filter: brightness(0.8);
+        transition: filter 0.3s ease;
+      }
+
+      .icon:hover {
+        filter: brightness(1);
+      }
     </style>
   </head>
   <body>
@@ -178,7 +206,7 @@
             <p>Premier projet en HTML/CSS.</p>
           </div>
           <div class="project-icons">
-            <img src="icon_html.png" alt="icon_html" />
+            <img src="icon_html.png" alt="icon_html" class="iconProjets" />
             <img src="icon_css.png" alt="icon_css" />
           </div>
         </a>
@@ -229,7 +257,7 @@
     <!-- Section Contact -->
     <footer
       style="
-        background-color: #1e1e1e86;
+        background-color: #1e1e1e9f;
         padding: 2rem 0;
         color: #ddd;
         text-align: center;
@@ -238,29 +266,40 @@
       "
     >
       <h2 style="font-size: 2rem; color: #03dede">Contact</h2>
-      <p>
-        Email :
-        <a
-          href="mailto:theo.thws.06@gmail.com"
-          style="color: #03dede; text-decoration: none"
-          >theo.thws.06@gmail.com</a
-        >
-      </p>
-      <div class="social-icons" style="margin-top: 1rem">
-        <a href="https://www.linkedin.com/in/xesiah/" style="margin: 0 15px">
-          <img
-            src="icon_linkedin.png"
-            alt="LinkedIn"
-            style="width: 30px; height: 30px; filter: brightness(0.8)"
-          />
-        </a>
-        <a href="https://github.com/xEsiah" style="margin: 0 15px">
-          <img
-            src="icon_github.png"
-            alt="GitHub"
-            style="width: 30px; height: 30px; filter: brightness(0.8)"
-          />
-        </a>
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          margin-top: 1rem;
+        "
+      >
+        <div class="social-icons" style="display: flex; gap: 15px">
+          <a
+            href="mailto:theo.thws.06@gmail.com?subject=Demande d'information&body=Bonjour,%0A%0A..."
+            class="social-icon"
+            target="_blank"
+          >
+            <img src="icon_mail.png" alt="Mail" class="icon" />
+          </a>
+
+          <a
+            href="https://github.com/xEsiah"
+            class="social-icon"
+            target="_blank"
+          >
+            <img src="icon_github.png" alt="GitHub" class="icon" />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/xesiah/"
+            class="social-icon"
+            target="_blank"
+          >
+            <img src="icon_linkedin.png" alt="LinkedIn" class="icon" />
+          </a>
+        </div>
       </div>
     </footer>
   </body>
