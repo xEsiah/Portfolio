@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio DUPRE Théo</title>
     <link rel="icon" href="icon.png" alt="Icone site Portfolio" />
-    <link rel="stylesheet" href="styles.css" />
+    <script src="hoverJS.js"></script>
     <style>
       body {
         background-image: url("image_background.jpg");
@@ -25,7 +25,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(27, 27, 27, 0.411);
+        background-color: rgba(27, 27, 27, 0.473);
         z-index: -1;
         margin: 0;
         pointer-events: none;
@@ -38,7 +38,7 @@
         text-align: left;
         padding: 2rem;
         border-bottom: 2px solid #333;
-        background-color: #1e1e1ebb;
+        background-color: #1e1e1e86;
         border-radius: 5px;
         margin-bottom: 120px;
       }
@@ -55,7 +55,7 @@
       }
       h2 {
         font-size: 3rem;
-        color: #ddd;
+        color: #eeeeee;
         text-shadow: 0 0 20px #03dede;
         text-align: center;
       }
@@ -71,7 +71,7 @@
         border-radius: 10px;
       }
       .project-card {
-        background-color: #1e1e1ebb;
+        background-color: #1e1e1e86;
         border: 1px solid #333;
         padding: 1rem;
         border-radius: 10px;
@@ -110,7 +110,7 @@
       #competences {
         font-family: Arial, sans-serif;
         padding: 20px;
-        background-color: #1e1e1ebb;
+        background-color: #1e1e1e86;
         border: 1px solid #333;
         border-radius: 10px;
         box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
@@ -126,7 +126,7 @@
         gap: 150px;
       }
       #competences li {
-        background-color: #1e1e1ebb;
+        background-color: #1e1e1e86;
         border: 1px solid #333;
         padding: 1rem;
         border-radius: 10px;
@@ -142,14 +142,14 @@
         transform: translateY(-5px);
         background-color: #2f739b;
         box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
-        animation: bounce 0.5s ease-out;
+        animation: bounce 0.5s;
       }
       @keyframes bounce {
         0% {
           transform: translateY(0);
         }
         50% {
-          transform: translateY(-10px);
+          transform: translateY(10px);
         }
         100% {
           transform: translateY(0);
@@ -172,7 +172,7 @@
       <h2>Mes Projets</h2>
 
       <div class="project-grid">
-        <a href="presentation_portfolio_wordpress.html" class="project-card">
+        <a href="presentation_site_factice_ecommerce.html" class="project-card">
           <div class="project-info">
             <h3>Site eCommerce</h3>
             <p>Premier projet en HTML/CSS.</p>
@@ -220,14 +220,16 @@
         <li>Python 🐍</li>
         <li>C 🖥️</li>
         <li>MYSQL 🐬</li>
-        <li>JavaScript ⚡</li>
+        <li id="JS" onmouseover="showSmiley()" onmouseout="resetText()">
+          JavaScript ⚡
+        </li>
       </ul>
     </section>
 
     <!-- Section Contact -->
     <footer
       style="
-        background-color: #1e1e1e;
+        background-color: #1e1e1e86;
         padding: 2rem 0;
         color: #ddd;
         text-align: center;
