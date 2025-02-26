@@ -65,25 +65,16 @@
 
       .video-container {
         text-align: center;
-        margin: 2rem 0;
       }
-      .video-wrapper {
-        position: relative;
-        width: 60%;
-        padding-top: 56.25%;
-        overflow: hidden;
-        background: #000;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-        height: 0;
-      }
-      .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+      iframe {
         border: none;
+        display: block;
+        width: 100%; /* Utiliser 100% pour occuper toute la largeur disponible */
+        height: auto; /* La hauteur s'ajustera proportionnellement à la largeur */
+        max-width: 1200px; /* Limite la largeur maximale pour éviter l'extension au-delà d'un certain point */
+        aspect-ratio: 16/9; /* Maintient le ratio 16:9 pour éviter des déformations */
+        margin-left: auto;
+        margin-right: auto; /* Centre l'iframe sans utiliser de margin général */
       }
 
       @media (max-width: 768px) {
@@ -106,6 +97,10 @@
 
         h2 {
           font-size: 2rem;
+        }
+
+        iframe {
+          width: 100%; /* Sur mobile, la vidéo prendra toute la largeur */
         }
       }
 
@@ -134,15 +129,12 @@
     </header>
     <div class="video-container">
       <h2>Présentation du projet</h2>
-      <div class="video-wrapper">
-        <iframe
-          src="videos/Ascending Legends.mp4"
-          title="Présentation Ascending Legends"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
+      <iframe
+        src="videos/Ascending Legends.mp4"
+        title="Présentation Ascending Legends"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
     </div>
     <footer>
       <a href="index.html">Retour au portfolio</a>
