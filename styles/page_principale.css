@@ -83,8 +83,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-.project-card:hover,
-.project-card:focus {
+.project-card:hover {
   transform: translateY(-5px);
   background-color: #6fc2f1ce;
   box-shadow: 0 0 20px rgba(57, 192, 192, 0.5);
@@ -142,12 +141,27 @@ h2 {
   cursor: pointer;
 }
 
-#competences li:hover,
-#competences li:focus {
-  transform: translateY(-5px);
+#competences li:hover {
   background-color: #6fc2f1ce;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
   outline: none;
+  animation: shake 0.3s ease-in-out;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.element {
+  animation: shake 0.3s ease-in-out infinite;
 }
 #centrer_retour_index {
   color: #03dede;
