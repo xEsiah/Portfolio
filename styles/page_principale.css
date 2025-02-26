@@ -1,5 +1,5 @@
 body {
-  font-family: "Russo One", sans-serif;
+  font-family: "Orbitron", sans-serif;
   background-color: #1e1e1e;
   background-image: url("../images/image_background.jpg");
   background-size: cover;
@@ -43,11 +43,16 @@ header {
 }
 h1 {
   font-size: 3.5rem;
-  color: #03dede;
+  color: #eeeeee;
   text-shadow: 0 0 10px #03dede;
   margin: 0.5rem 0;
 }
-
+#titre_honorifique {
+  font-size: 1.5rem;
+  color: #03dede;
+  text-shadow: 0 0 10px #ffffff;
+  margin-bottom: 20px;
+}
 p {
   font-size: 1.2rem;
   color: #ddd;
@@ -151,15 +156,14 @@ h2 {
   border: 2px solid #03dede;
   border-radius: 8px;
   background-color: rgba(30, 30, 30, 0.8);
-
   transition: all 0.3s ease;
   font-weight: bold;
   display: flex;
+  max-width: 50%;
+  width: 100%;
   justify-content: center;
   align-items: center;
-
-  margin-bottom: 60px;
-  margin-top: 60px;
+  margin: 60px auto;
 }
 #centrer_retour_index:hover {
   color: #1e1e1e;
@@ -211,11 +215,13 @@ footer {
   gap: 20px;
 }
 footer h2 {
-  font-size: 2rem;
-  color: #03dede;
+  margin-top: 0;
 }
 footer p {
   font-size: 0.7rem;
+}
+#message_prévention {
+  margin-top: 30px;
 }
 
 /* Adaptation mobile */
