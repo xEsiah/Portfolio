@@ -6,7 +6,6 @@
     <title>Images Portfolio Wordpress</title>
     <link rel="icon" href="images/icon.png" alt="Icone site Portfolio" />
     <style>
-      /* Styles sombres avec accents néon */
       body {
         background-color: #1e1e1e;
         background-image: url("images/image_background.jpg");
@@ -32,6 +31,7 @@
         margin: 0;
         pointer-events: none;
       }
+
       header {
         box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
         display: flex;
@@ -56,37 +56,36 @@
         text-shadow: 0 0 20px #03dede;
         text-align: center;
       }
-      a {
-        -webkit-tap-highlight-color: transparent;
-      }
       .PFP {
         width: 200px;
         height: 200px;
         border-radius: 50%;
         object-fit: cover;
       }
-      .images-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        padding: 2rem;
-      }
-      .images-container img {
-        width: 100%;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-      }
+
       .video-container {
         text-align: center;
-        margin: 2rem;
+        margin: 2rem 0;
       }
-      .video-container iframe {
-        width: 100%;
-        max-width: 800px;
-        height: 450px;
+      .video-wrapper {
+        position: relative;
+        width: 60%;
+        padding-top: 56.25%;
+        overflow: hidden;
+        background: #000;
         border-radius: 10px;
         box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        height: 0;
       }
+      .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
       @media (max-width: 768px) {
         header {
           flex-direction: column;
@@ -105,36 +104,27 @@
           font-size: 3rem;
         }
 
-        p {
-          font-size: 1rem;
+        h2 {
+          font-size: 2rem;
         }
       }
-      .video-wrapper {
-        position: relative;
-        width: 100%;
-        padding-top: 56.25%; /* Maintient le ratio 16:9 */
-        overflow: hidden;
-        background: #000;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-      }
 
-      .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
+      footer {
+        background-color: #1e1e1e9f;
+        padding: 2rem 0;
+        color: #ddd;
+        text-align: center;
+        border-top: 2px solid rgba(0, 255, 255, 0.5);
+        border-radius: 5px;
       }
-      .video-container iframe {
-        width: 100%;
-        height: auto;
+      footer a {
+        color: #03dede;
+        text-decoration: none;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
-    <!-- En-tête avec photo de profil et titre -->
     <header>
       <div class="profile">
         <h1>DUPRE Theo</h1>
@@ -142,8 +132,6 @@
       </div>
       <img class="PFP" src="images/dupre_theo.jpg" alt="Photo de profil" />
     </header>
-
-    <!-- Section vidéo -->
     <div class="video-container">
       <h2>Présentation du projet</h2>
       <div class="video-wrapper">
@@ -156,23 +144,8 @@
         ></iframe>
       </div>
     </div>
-
-    <!-- Footer avec lien vers le portfolio -->
-    <footer
-      style="
-        background-color: #1e1e1e9f;
-        padding: 2rem 0;
-        color: #ddd;
-        text-align: center;
-        border-top: 2px solid rgba(0, 255, 255, 0.5);
-        border-radius: 5px;
-      "
-    >
-      <a
-        href="index.html"
-        style="color: #03dede; text-decoration: none; font-weight: bold"
-        >Retour au portfolio</a
-      >
+    <footer>
+      <a href="index.html">Retour au portfolio</a>
     </footer>
   </body>
 </html>
