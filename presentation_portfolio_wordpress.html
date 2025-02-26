@@ -12,6 +12,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        background-position: center;
         color: #ffffff;
         font-family: Arial, sans-serif;
         margin: 15px;
@@ -69,12 +70,12 @@
       iframe {
         border: none;
         display: block;
-        width: 100%; /* Utiliser 100% pour occuper toute la largeur disponible */
-        height: auto; /* La hauteur s'ajustera proportionnellement à la largeur */
-        max-width: 1200px; /* Limite la largeur maximale pour éviter l'extension au-delà d'un certain point */
-        aspect-ratio: 16/9; /* Maintient le ratio 16:9 pour éviter des déformations */
+        width: 100%;
+        height: auto;
+        max-width: 1200px;
+        aspect-ratio: 16/9;
         margin-left: auto;
-        margin-right: auto; /* Centre l'iframe sans utiliser de margin général */
+        margin-right: auto;
       }
 
       @media (max-width: 768px) {
@@ -100,7 +101,7 @@
         }
 
         iframe {
-          width: 100%; /* Sur mobile, la vidéo prendra toute la largeur */
+          width: 100%;
         }
       }
 
