@@ -1,0 +1,123 @@
+body {
+  font-family: "Russo One", sans-serif;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  margin: 15px;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/image_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 27, 27, 0.473);
+  z-index: -1;
+  pointer-events: none;
+}
+
+header {
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 2rem;
+  border-bottom: 2px solid #333;
+  background-color: #1e1e1e9f;
+  border-radius: 5px;
+  margin-bottom: 60px;
+}
+h1 {
+  font-size: 4rem;
+  color: #03dede;
+  text-shadow: 0 0 10px #03dede;
+  text-align: left;
+}
+h2 {
+  font-size: 3rem;
+  color: #ddd;
+  text-shadow: 0 0 20px #03dede;
+  text-align: center;
+}
+.PFP {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.video-container {
+  text-align: center;
+}
+iframe {
+  border: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  aspect-ratio: 16/9;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .PFP {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  iframe {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: #1e1e1e9f;
+  padding: 2rem 0;
+  color: #ddd;
+  text-align: center;
+  border-top: 2px solid rgba(0, 255, 255, 0.5);
+  border-radius: 5px;
+}
+footer a {
+  color: #03dede;
+  text-decoration: none;
+  font-weight: bold;
+}
