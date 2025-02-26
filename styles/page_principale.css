@@ -21,14 +21,13 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(27, 27, 27, 0.425);
+  background-color: rgba(27, 27, 27, 0.4);
   z-index: -1;
   pointer-events: none;
 }
 
 /* En-tête */
 header {
-  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
@@ -39,8 +38,9 @@ header {
   margin-bottom: 100px;
   text-align: center;
 }
-header .profile {
-  flex: 1;
+.PFP {
+  width: 200px;
+  border-radius: 10%;
 }
 h1 {
   font-size: 3.5rem;
@@ -55,12 +55,6 @@ p {
   margin: 10px 0;
 }
 
-.PFP {
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
-  margin-left: 20px;
-}
 /* Section Projets */
 h2 {
   font-size: 2.5rem;
