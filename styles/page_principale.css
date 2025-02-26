@@ -177,7 +177,11 @@ footer {
   border-radius: 5px;
   margin-top: 50px;
 }
-
+footer .icons_liens {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 footer h2 {
   font-size: 2rem;
   color: #03dede;
