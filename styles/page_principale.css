@@ -1,15 +1,15 @@
 body {
+  font-family: "Orbitron", sans-serif;
   background-color: #1e1e1e;
   background-image: url("../images/image_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #f0f0f0;
-  margin: 0; /* Retirer les marges du body */
+  margin: 0;
   padding: 0;
   line-height: 1.6;
 }
-/* Superposition semi-transparente */
 body::before {
   content: "";
   position: fixed;
@@ -17,14 +17,11 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-
   background-color: rgba(27, 27, 27, 0.4);
   z-index: -1;
   pointer-events: none;
 }
-.margin_body_sauf_headerfooter {
-  margin: 15px;
-}
+
 /* En-tête */
 header {
   justify-content: space-between;
@@ -36,6 +33,9 @@ header {
   border-radius: 10px;
   margin-bottom: 100px;
   text-align: center;
+}
+.margin_body_sauf_headerfooter {
+  margin: 15px;
 }
 .PFP {
   width: 200px;
@@ -60,6 +60,9 @@ p {
 }
 
 /* Section Projets */
+#projets {
+  margin-bottom: 100px;
+}
 h2 {
   font-size: 2.5rem;
   color: #eeeeee;
@@ -116,7 +119,7 @@ h2 {
   border: 1px solid #333;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 #competences ul {
@@ -159,10 +162,6 @@ h2 {
     transform: translateX(-5px);
   }
 }
-
-.element {
-  animation: shake 0.3s ease-in-out infinite;
-}
 #centrer_retour_index {
   color: #03dede;
   text-decoration: none;
@@ -186,7 +185,28 @@ h2 {
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-/* Liens Sociaux */
+
+/* Pied de page */
+footer {
+  background-color: rgba(30, 30, 30, 0.8);
+  padding: 2rem 0;
+  color: #ddd;
+  text-align: center;
+  border-top: 2px solid rgba(0, 255, 255, 0.5);
+  border-radius: 5px;
+  margin-top: 50px;
+}
+.icons_liens {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+footer h2 {
+  margin-top: 0;
+}
+footer p {
+  font-size: 0.7rem;
+}
 .icon {
   width: 40px;
   height: 40px;
@@ -212,27 +232,6 @@ h2 {
   border-color: #1e1e1e;
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-/* Pied de page */
-footer {
-  background-color: rgba(30, 30, 30, 0.8);
-  padding: 2rem 0;
-  color: #ddd;
-  text-align: center;
-  border-top: 2px solid rgba(0, 255, 255, 0.5);
-  border-radius: 5px;
-  margin-top: 50px;
-}
-.icons_liens {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-footer h2 {
-  margin-top: 0;
-}
-footer p {
-  font-size: 0.7rem;
 }
 #message_prévention {
   margin-top: 30px;
