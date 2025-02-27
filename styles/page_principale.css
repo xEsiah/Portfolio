@@ -1,15 +1,12 @@
 body {
-  font-family: "Orbitron", sans-serif;
   background-color: #1e1e1e;
   background-image: url("../images/image_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #f0f0f0;
-  margin: 15px;
+  margin: 0; /* Retirer les marges du body */
   padding: 0;
-  position: relative;
-  transition: background-color 0.3s ease;
   line-height: 1.6;
 }
 /* Superposition semi-transparente */
@@ -20,11 +17,14 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
+
   background-color: rgba(27, 27, 27, 0.4);
   z-index: -1;
   pointer-events: none;
 }
-
+.margin_body_sauf_headerfooter {
+  margin: 15px;
+}
 /* En-tête */
 header {
   justify-content: space-between;
