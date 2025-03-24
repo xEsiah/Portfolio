@@ -49,7 +49,7 @@ iframe {
   margin-right: auto;
 }
 
-.video-container img {
+img {
   border: none;
   display: block;
   width: 100%;
@@ -92,6 +92,22 @@ h3 {
   text-shadow: 0 0 10px #03dede;
   margin-bottom: 1rem;
   text-align: center;
+}
+
+.site-container {
+  color: #03dede;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 2px solid #03dede;
+  border-radius: 8px;
+  background-color: rgba(30, 30, 30, 0.8);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  max-width: 50%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto;
 }
 
 .keyword {
