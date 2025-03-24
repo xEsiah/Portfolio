@@ -2,7 +2,6 @@ body {
   font-family: "Orbitron", sans-serif;
   background-color: #1e1e1e;
   color: #ffffff;
-
   padding: 0;
   position: relative;
   overflow-x: hidden;
@@ -48,6 +47,64 @@ iframe {
   aspect-ratio: 16/9;
   margin-left: auto;
   margin-right: auto;
+}
+
+.video-container img {
+  border: none;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  aspect-ratio: 16/9;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.code-wrapper {
+  font-size: 1, 1rem;
+  background-color: rgba(10, 10, 10, 0.719);
+  border: 2px solid #0ff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.code-wrapper pre {
+  color: #0ff;
+  font-family: "Orbitron", monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 0.5rem;
+}
+
+.code-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 0 10px #03dede;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.keyword {
+  color: #ff00ff;
+} /* Mots-clés */
+.function {
+  color: #00ffff;
+} /* Fonctions */
+.string {
+  color: #ffcc00;
+} /* Chaînes de caractères */
+.comment {
+  color: #888888;
 }
 
 @media (max-width: 768px) {
