@@ -34,10 +34,10 @@ header {
   margin-bottom: 100px;
   text-align: center;
 }
-.margin_body_sauf_headerfooter {
+.margin_body {
   margin: 15px;
 }
-.PFP {
+.pfp {
   width: 200px;
   border-radius: 10%;
 }
@@ -47,7 +47,7 @@ h1 {
   text-shadow: 0 0 10px #03dede;
   margin: 0.5rem 0;
 }
-#titre_honorifique {
+#honorific_title {
   font-size: 1.5rem;
   color: #03dede;
   text-shadow: 0 0 10px #ffffff;
@@ -60,7 +60,7 @@ p {
 }
 
 /* Section Projets */
-#projets {
+#projects {
   margin-bottom: 100px;
 }
 h2 {
@@ -113,7 +113,7 @@ h2 {
 }
 
 /* Compétences */
-#competences {
+#skills {
   padding: 25px;
   background-color: rgba(30, 30, 30, 0.8);
   border: 1px solid #333;
@@ -122,7 +122,7 @@ h2 {
   margin-bottom: 100px;
 }
 
-#competences ul {
+#skills ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -132,7 +132,7 @@ h2 {
   margin: 0;
 }
 
-#competences li {
+#skills li {
   background-color: rgba(30, 30, 30, 0.8);
   border: 1px solid #333;
   padding: 1rem;
@@ -144,7 +144,7 @@ h2 {
   cursor: pointer;
 }
 
-#competences li:hover {
+#skills li:hover {
   background-color: #6fc2f1ce;
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
   outline: none;
@@ -233,7 +233,7 @@ footer p {
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-#message_prévention {
+#about_email {
   margin-top: 30px;
 }
 
@@ -259,7 +259,7 @@ footer p {
     font-size: 0.8rem;
   }
 
-  .PFP {
+  .pfp {
     width: 150px;
   }
 
@@ -273,7 +273,7 @@ footer p {
     margin-bottom: 1rem;
   }
 
-  #competences ul {
+  #skills ul {
     gap: 30px;
   }
 }
