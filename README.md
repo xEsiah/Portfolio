@@ -8,7 +8,10 @@
 
 ## 🌐 Live Demo
 
-👉 [portfolio-xesiahs-projects.vercel.app](https://portfolio-xesiahs-projects.vercel.app)
+👉 [https://esiah.dev/projects/e1/](https://esiah.dev/projects/e1/)
+
+**This portfolio is now merged on my own website ! Check it out !**
+
 
 ## 🧰 Tech Stack
 
