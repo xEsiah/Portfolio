@@ -10,7 +10,7 @@
 
 👉 [https://esiah.dev/projects/e1/](https://esiah.dev/projects/e1/)
 
-**This portfolio is now merged on my own website ! Check it out !**
+**This portfolio is now merged on my own website ! Check it out for the lastest updates !**
 
 
 ## 🧰 Tech Stack
